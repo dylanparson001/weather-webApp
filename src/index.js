@@ -12,17 +12,17 @@ const formWeather = document.querySelector(".form-input");
 formWeather.addEventListener('submit', (e)=>{
     e.preventDefault();
     
-    input.setLocation(formWeather);
-    input.setDegree(formWeather);
+    input.setLocation();
+    input.setDegree();
 
-    //passing in the value directly (need to fix get methods)
     weatherAPI();
 });
 
 const weatherAPI = async () =>{
-    const getWeather = new Weather(input.location);
+    const results =document.querySelector(".weather-results");
+    const getWeather = new Weather(input.location, input.degree);
     // needs to wait for weather to fetched before storing into temp value
     const  temp = await getWeather.getTemp();
     
-    document.querySelector(".weather-results").textContent =  temp;
+    results.textContent =  `The temperature in ${input.location} is currently ${temp}`;
 }

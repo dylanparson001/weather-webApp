@@ -1,35 +1,29 @@
 export default class getInput{
     
     constructor(){
+        //create object properties, don't know what they are yet
         this.location = "undefined";
         this.degree = "undefined";
     };
    
     // set location 
-    setLocation(weatherForm){
+    setLocation(){
         const locationValue = document.querySelector("#form-input-location").value;
         
         this.location = locationValue;
     }    
     
     // set degree (celsius or fahrenheit)
-    setDegree(weatherForm){
+    setDegree(){
         // grab whichever radio button is checked, fahrenheit is the default
-        const degreeValue = document.querySelector('input[name="degree"]:checked').value;
-        
+        let degreeValue = document.querySelector('input[name="degree"]:checked').value;
+        if(degreeValue == "Fahrenheit"){
+            //convert to imperial or metric for api 
+            degreeValue = "imperial";
+        }
+        else {
+            degreeValue = "metric";
+        }
         this.degree = degreeValue;
     }
-
-    // for some reason not working with api call, not returning value
-    /*
-    getLocation(){
-        return this.location;
-    }
-    // get degree
-    getDegree(){
-        return this.degree;
-    }
-    */
-    
-    // return object with location and degree properties
 }
