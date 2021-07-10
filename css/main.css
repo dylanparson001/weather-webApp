@@ -38,6 +38,13 @@
   background-color: #d4985f;
 }
 
+.weather-results {
+  background-color: rgba(79, 156, 101, 0.6);
+  margin: 0 auto;
+  text-align: center;
+  font-size: 5rem;
+}
+
 .title {
   text-align: center;
   margin-bottom: 2%;
