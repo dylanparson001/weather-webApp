@@ -10,10 +10,13 @@
 <body>
     <h1 class="title">Get the Weather! Enter your location below: </h1>
     <form action="" class="form-input">
-        <textarea placeholder="Your Location" class = "form-input-item"  name="location" id="form-input-location" ></textarea>
-        <button name="degree" class = "form-input-item" id="form-input-degree" >Celsius</button>
-        <button type="submit" class = "form-input-item" id = "submit">Submit</button>
+        <input required type = "text" placeholder="Your Location" class = "form-input-item"  name="location" id="form-input-location" ></input>
+        <input checked type = "radio" value = "Fahrenheit" class = "form-input-item" id="form-input-degree" name = "degree" >Fahrenheit</input>
+        <input type = "radio" value = "Celsius" class = "form-input-item" id="form-input-degree" name = "degree" >Celsius</input>
+        <input type="submit" class = "form-input-item" id = "submit"></input>
     </form>
+    
+    <main class="weather-results"></main>
     <script src = "main.js"></script>
 </body>
-</html>
+</html> 
