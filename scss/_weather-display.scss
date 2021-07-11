@@ -1,8 +1,16 @@
-.weather-results{
-    
-    background-color: $background-color;
-    margin: 10% auto;
-    text-align: center;
-    font-size: 5rem;
-    width: 50%;
+.weather-results {
+  background-color: $background-color;
+  margin: 10% auto;
+  text-align: center;
+  font-size: 5rem;
+  width: 50%;
+}
+.weather-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#weather-card-title {
+  border-bottom: 2px solid;
 }
